@@ -1,0 +1,12 @@
+.cards-container-expanded {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  gap: 32px;
+  padding: 0 54px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #34c94a76;
+}

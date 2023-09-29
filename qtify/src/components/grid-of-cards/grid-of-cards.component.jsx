@@ -1,19 +1,28 @@
+import { useState } from "react";
+
 import "./grid-of-cards.styles.css";
 
-import Card from "../card/card.component";
+import CollapsedView from "../collapsed-view/collapsed-view.component";
+import ExpandedView from "../expanded-view/expanded-view.component";
 
 const GridOfCards = ({ albums, albumsCategory }) => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleIsCollapsed = () => setIsCollapsed(!isCollapsed);
+
   return (
     <div className="grid-container">
       <div className="header">
         <div className="album-category">{`${albumsCategory} Albums`}</div>
-        <div className="collapse">Collapse</div>
+        <div className="collapse" onClick={toggleIsCollapsed}>{`${
+          isCollapsed ? "Show all" : "Collapse"
+        }`}</div>
       </div>
-      <div className="cards-container">
-        {albums.map((album) => (
-          <Card key={album.id} album={album} />
-        ))}
-      </div>
+      {isCollapsed ? (
+        <CollapsedView albums={albums} />
+      ) : (
+        <ExpandedView albums={albums} />
+      )}
     </div>
   );
 };

@@ -38,8 +38,8 @@ const App = () => {
     <div className="App">
       <Navbar />
       <HeroSection />
-      <GridOfCards albums={topAlbums} albumsCategory="Top" />
-      <GridOfCards albums={newAlbums} albumsCategory="New" />
+      {topAlbums && <GridOfCards albums={topAlbums} albumsCategory="Top" />}
+      {newAlbums && <GridOfCards albums={newAlbums} albumsCategory="New" />}
     </div>
   );
 };
