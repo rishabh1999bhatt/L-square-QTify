@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+.album-category {
+  height: 30px;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #ffffff;
+}
+.collapse {
+  width: 90px;
+  height: 30px;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #34c94b;
+  cursor: pointer;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  gap: 32px;
+  padding: 0 54px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #34c94a76;
+}

@@ -1,21 +1,24 @@
 .card-container {
   height: 232px;
-  width: 165px;
+  width: 174px;
   background-color: #121212;
-  margin: 0 auto;
   cursor: pointer;
 }
 .card-content {
   height: 205px;
-  width: 165px;
+  width: 174px;
   background-color: #121212;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-image {
-  width: 165px;
+  width: 174px;
   height: 170px;
   border-radius: 10px 10px 0px 0px;
   background-color: brown;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-image img {
@@ -23,6 +26,8 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .card-middle {
   height: 35px;
@@ -33,7 +38,7 @@
   border-radius: 0 0 10px 10px;
 }
 .card-followers {
-  width: 80px;
+  width: 65px;
   height: 23px;
   border-radius: 10px;
   background-color: #121212;
@@ -55,7 +60,6 @@
   height: 27px;
 }
 .card-footer span {
-  width: 105px;
   height: 21px;
   font-family: "Poppins";
   font-size: 14px;
