@@ -4,5 +4,10 @@
   background-color: rgba(52, 201, 75, 1);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: relative;
+}
+.app-logo-container {
+  cursor: pointer;
 }

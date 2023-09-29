@@ -6,7 +6,7 @@ const SearchBar = () => {
   return (
     <div className="search-bar-container">
       <input placeholder="Search a album of your choice" />
-      <button>
+      <button type="button">
         <SearchIcon />
       </button>
     </div>
