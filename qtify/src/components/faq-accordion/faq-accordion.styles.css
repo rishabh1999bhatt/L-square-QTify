@@ -1,0 +1,66 @@
+.faq-container {
+  width: 1135px;
+  min-height: 345px;
+  border-radius: 0px 0px 10px 10px;
+  margin: 20px auto;
+}
+.faq-container header {
+  width: 129px;
+  height: 75px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+.faq-container header span {
+  font-family: "Poppins";
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 75px;
+  color: #ffffff;
+}
+.accordion-faq-container {
+  margin-top: 16px;
+}
+
+.acc-details-container {
+  height: 65px !important;
+  display: flex;
+  align-items: center;
+}
+.acc-details {
+  font-family: "Poppins";
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0px;
+  color: #121212;
+}
+
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded,
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+  height: 70px !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+  background-color: #121212 !important;
+  border: 1px solid #ffffff !important;
+}
+
+.css-ahj2mt-MuiTypography-root {
+  font-family: "Poppins" !important;
+  font-size: 19px !important;
+  font-weight: 500 !important;
+  line-height: 30px !important;
+  letter-spacing: 0px !important;
+  color: #ffffff;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:first-of-type,
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:last-of-type {
+  border-radius: 10px !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  color: #34c94b;
+  font-size: 40px !important;
+  font-weight: 900 !important;
+  line-height: 40px !important;
+}
