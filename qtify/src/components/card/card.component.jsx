@@ -1,23 +1,24 @@
 import "./card.styles.css";
 
-const Card = ({ album }) => {
-  const { title, follows, image } = album;
-  const followCount = Math.round(follows / 1000);
-
+const Card = ({ album, song }) => {
   return (
     <div className="card-container">
       <div className="card-content">
         <div className="card-image">
-          <img src={image} />
+          {album ? <img src={album.image} /> : <img src={song.image} />}
         </div>
         <div className="card-middle">
           <div className="card-followers">
-            <span>{followCount}k Follows</span>
+            {album ? (
+              <span>{Math.round(album.follows / 1000)}k Follows</span>
+            ) : (
+              <span>{Math.round(song.likes / 1000)}k Likes</span>
+            )}
           </div>
         </div>
       </div>
       <div className="card-footer">
-        <span>{title}</span>
+        {album ? <span>{album.title}</span> : <span>{song.title}</span>}
       </div>
     </div>
   );

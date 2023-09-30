@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import "./grid-of-cards.styles.css";
+import "./album-section.styles.css";
 
 import CollapsedView from "../collapsed-view/collapsed-view.component";
 import ExpandedView from "../expanded-view/expanded-view.component";
 
-const GridOfCards = ({ albums, albumsCategory }) => {
+const AlbumSection = ({ albums, albumsCategory }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleIsCollapsed = () => setIsCollapsed(!isCollapsed);
@@ -26,4 +26,4 @@ const GridOfCards = ({ albums, albumsCategory }) => {
     </div>
   );
 };
-export default GridOfCards;
+export default AlbumSection;

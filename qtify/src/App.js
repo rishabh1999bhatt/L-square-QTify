@@ -4,11 +4,15 @@ import axios from "axios";
 
 import Navbar from "./components/navbar/navbar.component";
 import HeroSection from "./components/hero-section/hero-section.component";
-import GridOfCards from "./components/grid-of-cards/grid-of-cards.component";
+import AlbumSection from "./components/album-section/album-section.component";
+import SongsSection from "./components/songs-section/songs-section.component";
 
 const App = () => {
   const [topAlbums, setTopAlbums] = useState([]);
   const [newAlbums, setNewAlbums] = useState([]);
+  const [songs, setSongs] = useState([]);
+  const [genres, setGenres] = useState([]);
+
   const fetchTopAlbums = async () => {
     try {
       const { data } = await axios.get(
@@ -29,17 +33,42 @@ const App = () => {
       console.log(error);
     }
   };
+  const fetchSongs = async () => {
+    try {
+      const { data } = await axios.get(
+        "https://qtify-backend-labs.crio.do/songs"
+      );
+      setSongs(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const fetchGenres = async () => {
+    try {
+      const { data } = await axios.get(
+        "https://qtify-backend-labs.crio.do/genres"
+      );
+      setGenres([{ key: "all", label: "All" }, ...data.data]);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
   useEffect(() => {
     fetchTopAlbums();
     fetchNewAlbums();
+    fetchSongs();
+    fetchGenres();
   }, []);
 
   return (
     <div className="App">
       <Navbar />
       <HeroSection />
-      {topAlbums && <GridOfCards albums={topAlbums} albumsCategory="Top" />}
-      {newAlbums && <GridOfCards albums={newAlbums} albumsCategory="New" />}
+      {topAlbums && <AlbumSection albums={topAlbums} albumsCategory="Top" />}
+      {newAlbums && <AlbumSection albums={newAlbums} albumsCategory="New" />}
+      {songs && <SongsSection songs={songs} genres={genres} category="Songs" />}
     </div>
   );
 };

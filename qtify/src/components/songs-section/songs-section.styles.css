@@ -1,0 +1,17 @@
+.label-span {
+  text-transform: lowercase;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.label-span::first-letter {
+  text-transform: uppercase;
+}
+
+.tabs-container {
+  padding: 0 23px;
+  margin: 0px 0 15px 0;
+}
