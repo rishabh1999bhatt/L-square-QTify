@@ -35,8 +35,8 @@
   color: #121212;
 }
 
-.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded,
-.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+#panel1a-header,
+#panel2a-header {
   height: 70px !important;
   border-radius: 10px !important;
   color: #ffffff !important;
@@ -44,7 +44,7 @@
   border: 1px solid #ffffff !important;
 }
 
-.css-ahj2mt-MuiTypography-root {
+.MuiTypography-root {
   font-family: "Poppins" !important;
   font-size: 19px !important;
   font-weight: 500 !important;
@@ -53,12 +53,11 @@
   color: #ffffff;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root:first-of-type,
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root:last-of-type {
+.accordion-faq-container {
   border-radius: 10px !important;
 }
 
-.css-i4bv87-MuiSvgIcon-root {
+.MuiSvgIcon-root {
   color: #34c94b;
   font-size: 40px !important;
   font-weight: 900 !important;
