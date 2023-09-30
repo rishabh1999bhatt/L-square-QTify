@@ -6,3 +6,10 @@
   padding-bottom: 30px;
   border-bottom: 1px solid #34c94a76;
 }
+
+.prev-arrow,
+.next-arrow {
+  height: 100px;
+  width: 100px;
+  background-color: wheat;
+}

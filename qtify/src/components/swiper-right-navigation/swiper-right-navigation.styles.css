@@ -1,0 +1,8 @@
+.swiper-right-navigation {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  left: 1378px;
+  bottom: 150px;
+  cursor: pointer;
+}

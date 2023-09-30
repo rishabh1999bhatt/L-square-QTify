@@ -1,0 +1,8 @@
+.swiper-left-navigation {
+  cursor: pointer;
+  position: absolute;
+  left: 1px;
+  top: 38%;
+  transform: translateY(-50%);
+  z-index: inherit;
+}
