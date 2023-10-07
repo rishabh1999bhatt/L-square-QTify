@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+
+import axios from "axios";
+
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -7,45 +11,48 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./faq-accordion.styles.css";
 
 const FAQAccordion = () => {
+  const [faq, setFaq] = useState([]);
+
+  useEffect(() => {
+    const fetchFaq = async () => {
+      try {
+        const res = await axios.get("https://qtify-backend-labs.crio.do/faq");
+        setFaq(res.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchFaq();
+  }, []);
+
+  // console.log(faq);
+
   return (
     <div className="faq-container">
       <header>
         <span>FAQs</span>
       </header>
       <div className="accordion-container">
-        <Accordion className="accordion-faq-container">
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>Is QTify free to use?</Typography>
-          </AccordionSummary>
-          <AccordionDetails className="acc-details-container">
-            <Typography>
-              <span className="acc-details">
-                Yes! It is 100% free, and has 0% ads!
-              </span>
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion className="accordion-faq-container">
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2a-content"
-            id="panel2a-header"
-          >
-            <Typography>Can I download and listen to songs offline?</Typography>
-          </AccordionSummary>
-          <AccordionDetails className="acc-details-container">
-            <Typography>
-              <span className="acc-details">
-                Sorry, unfortunately we don't provide the service to download
-                any songs.
-              </span>
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+        {faq &&
+          faq.map((item) => {
+            const { question, answer } = item;
+            return (
+              <Accordion key={question} className="accordion-faq-container">
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>{question}</Typography>
+                </AccordionSummary>
+                <AccordionDetails className="acc-details-container">
+                  <Typography>
+                    <span className="acc-details">{answer}</span>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            );
+          })}
       </div>
     </div>
   );

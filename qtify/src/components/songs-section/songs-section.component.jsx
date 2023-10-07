@@ -87,9 +87,10 @@ const SongsSection = ({ songs, category, genres }) => {
           aria-label="basic tabs example"
         >
           {genres.map(({ label }, idx) => {
-            console.log(label);
+            // console.log(label);
             return (
               <Tab
+                key={label}
                 className="genre-tab"
                 label={<span className="label-span">{label}</span>}
                 {...a11yProps(idx)}
