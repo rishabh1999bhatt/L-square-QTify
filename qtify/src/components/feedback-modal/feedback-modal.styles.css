@@ -1,0 +1,126 @@
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+
+.feedback-modal-container {
+  width: 526px;
+  height: 524px;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 10px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+}
+
+.feedback-modal-container form {
+  width: 462px;
+  height: 349px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 33px;
+  margin: 0 auto;
+}
+
+form input {
+  width: 462px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid #34c94b;
+  background: none;
+  outline: none;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #121212;
+  padding: 12px;
+}
+
+.input-description {
+  width: 462px;
+  height: 136px;
+  border-radius: 5px;
+  border: 1px solid #34c94b;
+  background: none;
+  outline: none;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #121212;
+  padding: 12px;
+  resize: none;
+}
+
+.feedback-modal-container button {
+  width: 192px;
+  height: 53px;
+  padding: 13px 14px 13px 14px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #34c94b;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.feedback-modal-container button span {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0.25px;
+  color: #ffffff;
+}
+
+.feedback-modal-container header {
+  width: 462px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.feedback {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #121212;
+}
+
+.feedback-close {
+  font-family: Font Awesome 6 Pro;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #121212;
+  justify-self: flex-end;
+}
+
+.modal-icon-container {
+  position: absolute;
+  right: -12px;
+}
+
+.modal-close-icon {
+  color: black !important;
+  transform: scale(0.55);
+  cursor: pointer;
+}

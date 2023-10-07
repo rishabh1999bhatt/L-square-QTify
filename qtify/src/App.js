@@ -7,8 +7,6 @@ import HeroSection from "./components/hero-section/hero-section.component";
 import AlbumSection from "./components/album-section/album-section.component";
 import SongsSection from "./components/songs-section/songs-section.component";
 import FAQAccordion from "./components/faq-accordion/faq-accordion.component";
-import SearchResultsContainer from "./components/search-results-container/search-results-container.component";
-// import SearchCard from "./components/search-card/search-card.component";
 
 const App = () => {
   const [topAlbums, setTopAlbums] = useState([]);
@@ -73,7 +71,6 @@ const App = () => {
       {newAlbums && <AlbumSection albums={newAlbums} albumsCategory="New" />}
       {songs && <SongsSection songs={songs} genres={genres} category="Songs" />}
       <FAQAccordion />
-      {/*<SearchResultsContainer />*/}
     </div>
   );
 };

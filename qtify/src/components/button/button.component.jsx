@@ -1,9 +1,14 @@
 import "./button.styles.css";
 
-const Button = () => {
+const Button = ({ setIsPopupOpen }) => {
+  const handlePopupOpen = () => {
+    setIsPopupOpen((isPopupOpen) => !isPopupOpen);
+  };
   return (
     <div className="button-container">
-      <button type="button">Give Feedback</button>
+      <button onClick={handlePopupOpen} type="button">
+        Give Feedback
+      </button>
     </div>
   );
 };

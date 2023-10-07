@@ -8,7 +8,6 @@ const SearchCard = ({ album }) => {
     acc += ", ";
     return acc;
   }, "");
-  console.log(artistsString);
 
   return (
     <div className="search-card-container">
