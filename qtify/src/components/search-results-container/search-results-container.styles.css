@@ -32,7 +32,10 @@
   display: none;
 }
 
-/* .search-results-container h4 {
+.search-results-container h4 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   color: #ffffff;
-  filter: brightness(80%);
-} */
+}
