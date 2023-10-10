@@ -1,14 +1,24 @@
+import { useNavigate } from "react-router-dom";
+
 import "./card.styles.css";
 import Tooltip from "@mui/material/Tooltip";
 
 const Card = ({ album, song }) => {
+  const navigate = useNavigate();
+
+  const handleNavigateToAlbumDetails = () =>
+    navigate(`/album-details/${album.slug}`);
+
   return (
     <Tooltip
       title={`${album ? album["songs"].length + " songs" : ""}`}
       placement="top"
       arrow
     >
-      <div className="card-container">
+      <div
+        className="card-container"
+        onClick={album && handleNavigateToAlbumDetails}
+      >
         <div className="card-content">
           <div className="card-image">
             {album ? <img src={album.image} /> : <img src={song.image} />}

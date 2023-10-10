@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
+import { Routes, Route } from "react-router-dom";
+
 import axios from "axios";
 
 import Navbar from "./components/navbar/navbar.component";
-import HeroSection from "./components/hero-section/hero-section.component";
-import AlbumSection from "./components/album-section/album-section.component";
-import SongsSection from "./components/songs-section/songs-section.component";
-import FAQAccordion from "./components/faq-accordion/faq-accordion.component";
+import LandingPage from "./routes/landing-page/landing-page.component";
+import AlbumDetails from "./routes/album-details/album-details.component";
 
 const App = () => {
   const [topAlbums, setTopAlbums] = useState([]);
@@ -65,12 +65,26 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar topAlbums={topAlbums} newAlbums={newAlbums} />
-      <HeroSection />
-      {topAlbums && <AlbumSection albums={topAlbums} albumsCategory="Top" />}
-      {newAlbums && <AlbumSection albums={newAlbums} albumsCategory="New" />}
-      {songs && <SongsSection songs={songs} genres={genres} category="Songs" />}
-      <FAQAccordion />
+      <Routes>
+        <Route
+          path="/"
+          element={<Navbar topAlbums={topAlbums} newAlbums={newAlbums} />}
+        >
+          <Route
+            index
+            element={
+              <LandingPage
+                topAlbums={topAlbums}
+                newAlbums={newAlbums}
+                songs={songs}
+                genres={genres}
+              />
+            }
+          />
+
+          <Route path="album-details/:slug" element={<AlbumDetails />} />
+        </Route>
+      </Routes>
     </div>
   );
 };

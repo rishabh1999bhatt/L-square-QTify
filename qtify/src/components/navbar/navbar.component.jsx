@@ -1,5 +1,7 @@
 import { useState, useEffect, Fragment } from "react";
 
+import { Outlet } from "react-router-dom";
+
 import "./navbar.styles.css";
 
 import { ReactComponent as QTifyLogo } from "../../assets/app-logo/app-logo.svg";
@@ -37,6 +39,7 @@ const Navbar = ({ topAlbums, newAlbums }) => {
       {searchString && (
         <SearchResultsContainer filteredAlbums={filteredAlbums} />
       )}
+      <Outlet />
     </Fragment>
   );
 };
