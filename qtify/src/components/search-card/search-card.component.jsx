@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./search-card.styles.css";
 
-const SearchCard = ({ album }) => {
+const SearchCard = ({ album, setSearchString }) => {
   const { title, image, follows, songs } = album;
   const artistsString = songs.reduce((acc, curr) => {
     acc += curr.artists[0];
@@ -12,8 +12,10 @@ const SearchCard = ({ album }) => {
 
   const navigate = useNavigate();
 
-  const handleNavigateToAlbumDetails = () =>
+  const handleNavigateToAlbumDetails = () => {
+    setSearchString("");
     navigate(`/album-details/${album.slug}`);
+  };
 
   return (
     <div

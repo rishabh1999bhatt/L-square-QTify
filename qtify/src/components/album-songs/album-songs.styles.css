@@ -1,0 +1,38 @@
+.album-songs-container {
+  padding: 0 80px;
+  min-height: 540px;
+}
+.album-songs-container header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+.songs-list span {
+  color: #ffffff;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* .title,
+.artist,
+.duration {
+  width: 33%;
+} */
+.title {
+  text-align: left;
+  width: 46%;
+}
+.artist {
+  text-align: left;
+  width: 40%;
+}
+.duration {
+  text-align: right;
+  width: 13%;
+}

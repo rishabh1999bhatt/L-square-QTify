@@ -1,5 +1,7 @@
 import { useState, useEffect, Fragment } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { Outlet } from "react-router-dom";
 
 import "./navbar.styles.css";
@@ -16,6 +18,8 @@ const Navbar = ({ topAlbums, newAlbums }) => {
   const [filteredAlbums, setFilteredAlbums] = useState();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     const newFilteredAlbums = albums.filter((album) =>
       album.title.toLowerCase().includes(searchString.toLowerCase())
@@ -23,11 +27,13 @@ const Navbar = ({ topAlbums, newAlbums }) => {
     setFilteredAlbums(newFilteredAlbums);
   }, [searchString]);
 
+  const handleNavigateToHome = () => navigate("/");
+
   return (
     <Fragment>
       {isPopupOpen && <FeedbackModal setIsPopupOpen={setIsPopupOpen} />}
       <div className="navbar-container">
-        <div className="app-logo-container">
+        <div onClick={handleNavigateToHome} className="app-logo-container">
           <QTifyLogo />
         </div>
         <SearchBar
@@ -37,7 +43,10 @@ const Navbar = ({ topAlbums, newAlbums }) => {
         <Button setIsPopupOpen={setIsPopupOpen} />
       </div>
       {searchString && (
-        <SearchResultsContainer filteredAlbums={filteredAlbums} />
+        <SearchResultsContainer
+          setSearchString={setSearchString}
+          filteredAlbums={filteredAlbums}
+        />
       )}
       <Outlet />
     </Fragment>

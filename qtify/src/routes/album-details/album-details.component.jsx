@@ -23,7 +23,7 @@ const AlbumDetails = () => {
       }
     };
     fetchAlbumSongs();
-  }, []);
+  }, [slug]);
   return (
     <div className="album-details-container">
       <AlbumDetailsHero album={album} />

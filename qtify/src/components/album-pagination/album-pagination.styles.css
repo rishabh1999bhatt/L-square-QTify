@@ -1,0 +1,56 @@
+.album-pagination-container {
+  color: #ffffff;
+}
+
+.album-pagination-container {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  padding: 0 80px;
+}
+.pagination-page-number-container {
+  display: flex;
+  width: 135px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pagination-page-number-container div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+.pagination-button {
+  font-family: Poppins;
+  height: 22px;
+  width: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #ffffff;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.selected {
+  height: 22px;
+  width: 22px;
+  border-radius: 100%;
+  background-color: #34c94b;
+  color: #121212;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-button-left,
+.pagination-button-right {
+  display: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}

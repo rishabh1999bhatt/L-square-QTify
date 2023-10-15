@@ -41,7 +41,7 @@
 
 .a-d-h-text {
   width: 700px;
-  height: 279px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   color: #ffffff;
@@ -133,4 +133,10 @@
   line-height: 27px;
   letter-spacing: 0.25px;
   color: #34c94b;
+}
+
+.current-page-songs h2 {
+  color: #ffffff;
+  width: 600px;
+  margin: 16px auto;
 }

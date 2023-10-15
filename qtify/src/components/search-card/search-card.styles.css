@@ -55,21 +55,40 @@
   font-weight: 400;
   line-height: 18px;
   color: #ffffff;
-  overflow: hidden;
   width: 269px;
   height: 18px;
-  position: relative;
-}
 
-.s-card-details-left-bottom span {
-  position: absolute;
+  /*SCROLLING TEXT IMPLEMENTATION*/
+  display: inline-block; /* important */
   white-space: nowrap;
-  transform: translateX(0);
-  transition: 60s;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .search-card-container:hover .s-card-details-left-bottom span {
-  transform: translateX(calc(200px - 100%));
+  display: inline-block;
+  animation-name: scroll-text;
+  animation-duration: 140s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  text-overflow: clip; /* important */
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%);
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  95% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .s-card-details-right {

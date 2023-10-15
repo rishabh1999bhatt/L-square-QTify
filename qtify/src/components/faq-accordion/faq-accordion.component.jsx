@@ -33,26 +33,25 @@ const FAQAccordion = () => {
         <span>FAQs</span>
       </header>
       <div className="accordion-container">
-        {faq &&
-          faq.map((item) => {
-            const { question, answer } = item;
-            return (
-              <Accordion key={question} className="accordion-faq-container">
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>{question}</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="acc-details-container">
-                  <Typography>
-                    <span className="acc-details">{answer}</span>
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            );
-          })}
+        {faq?.map((item) => {
+          const { question, answer } = item;
+          return (
+            <Accordion key={question} className="accordion-faq-container">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>{question}</Typography>
+              </AccordionSummary>
+              <AccordionDetails className="acc-details-container">
+                <Typography>
+                  <span className="acc-details">{answer}</span>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          );
+        })}
       </div>
     </div>
   );

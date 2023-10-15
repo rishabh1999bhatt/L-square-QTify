@@ -11,7 +11,7 @@ const CollapsedView = ({ albums }) => {
   return (
     <div className="cards-container-collapsed">
       <Swiper spaceBetween={32} slidesPerView={7} className="mySwiper">
-        {albums.map((album) => (
+        {albums?.map((album) => (
           <SwiperSlide key={album.id}>
             <Card album={album} />
           </SwiperSlide>
