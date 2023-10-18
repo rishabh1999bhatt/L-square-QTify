@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter } from "react-router-dom";
 
+import { MusicPlayerProvider } from "./context/music-player.context";
+
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -24,7 +26,9 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <App />
+        <MusicPlayerProvider>
+          <App />
+        </MusicPlayerProvider>
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>

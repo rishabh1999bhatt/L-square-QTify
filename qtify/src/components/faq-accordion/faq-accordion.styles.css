@@ -69,3 +69,7 @@
   font-weight: 900 !important;
   line-height: 40px !important;
 }
+
+.margin-fix {
+  margin-bottom: 10%;
+}

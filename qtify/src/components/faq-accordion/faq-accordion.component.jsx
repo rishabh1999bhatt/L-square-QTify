@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
+import { useContext } from "react";
+
 import axios from "axios";
+
+import { MusicPlayerContext } from "../../context/music-player.context";
 
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -12,6 +16,8 @@ import "./faq-accordion.styles.css";
 
 const FAQAccordion = () => {
   const [faq, setFaq] = useState([]);
+
+  const { isVisible } = useContext(MusicPlayerContext);
 
   useEffect(() => {
     const fetchFaq = async () => {
@@ -25,10 +31,8 @@ const FAQAccordion = () => {
     fetchFaq();
   }, []);
 
-  // console.log(faq);
-
   return (
-    <div className="faq-container">
+    <div className={`faq-container ${isVisible ? "margin-fix" : ""}`}>
       <header>
         <span>FAQs</span>
       </header>

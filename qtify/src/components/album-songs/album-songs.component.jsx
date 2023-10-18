@@ -1,8 +1,13 @@
+import { useContext } from "react";
+
 import "./album-songs.styles.css";
+
+import { MusicPlayerContext } from "../../context/music-player.context";
 
 import SongCard from "../song-card/song-card.component";
 
 const AlbumSongs = ({ songs }) => {
+  const { isVisible } = useContext(MusicPlayerContext);
   return (
     <div className="album-songs-container">
       <header>
@@ -16,7 +21,7 @@ const AlbumSongs = ({ songs }) => {
           <span>Duration</span>
         </div>
       </header>
-      <div className="album-songs-list">
+      <div className={`album-songs-list ${isVisible ? "margin-fix-2" : ""}`}>
         {songs?.map((song) => {
           return <SongCard key={song.id} song={song} />;
         })}

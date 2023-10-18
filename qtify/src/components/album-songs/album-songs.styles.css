@@ -1,6 +1,7 @@
 .album-songs-container {
   padding: 0 80px;
   min-height: 540px;
+  margin-bottom: 1rem;
 }
 .album-songs-container header {
   width: 100%;
@@ -35,4 +36,8 @@
 .duration {
   text-align: right;
   width: 13%;
+}
+
+.margin-fix-2 {
+  margin-bottom: 9.4%;
 }

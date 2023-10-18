@@ -1,0 +1,137 @@
+.music-player-container {
+  width: 100%;
+  height: 130px;
+  padding: 24px 32px;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -2px 6px 0px #ffffff59;
+  position: fixed;
+  opacity: 90%;
+  z-index: 999999;
+  color: #ffffff;
+}
+
+/* KEYFRAME ANIMATION */
+.music-player-container-expanded {
+  left: 0;
+  bottom: 0;
+  animation: 1s slide-up 1;
+}
+.music-player-container-collapsed {
+  left: 0;
+  bottom: -75px;
+  animation: 1s slide-down 1;
+}
+
+@keyframes slide-up {
+  from {
+    /* transform: translateY(100%); */
+    bottom: -75px;
+  }
+  to {
+    /* transform: translateY(0%); */
+    bottom: 0px;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -75px;
+  }
+}
+/* KEYFRAME ANIMATION */
+
+.music-player-logo {
+  width: 346px;
+  height: 82px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+  position: absolute;
+  left: 32px;
+}
+
+.m-p-logo-left {
+  width: 75.85px;
+  height: 82px;
+  border-radius: 10px;
+}
+
+.m-p-logo-left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.m-p-logo-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Poppins;
+  letter-spacing: 0px;
+}
+.m-p-logo-right span:nth-child(1) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.m-p-logo-right span:nth-child(2) {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.music-player-controls {
+  width: 750px;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pause-play-button {
+  cursor: pointer;
+}
+
+.music-progress {
+  width: 100%;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time-progress {
+  width: 676px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.time-progress-indicator {
+  height: 6px;
+  background-color: #34c94b;
+  border-radius: 3px;
+}
+
+.music-player-visibility-icons {
+  position: absolute;
+  right: 32px;
+  top: 24px;
+  cursor: pointer;
+}
+
+/* .icon-collapsed-fix {
+  top: 0px;
+} */
